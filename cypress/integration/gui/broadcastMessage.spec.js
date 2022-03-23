@@ -10,7 +10,7 @@ describe('Broadcast message', () => {
 
     cy.get('#broadcast_message_message').type(broadcastMessage)
 
-    cy.get('.broadcast-message-preview').should('contain', broadcastMessage)
+    cy.get('.broadcast-banner-message').should('contain', broadcastMessage)
 
     cy.contains('Add broadcast message').click()
 

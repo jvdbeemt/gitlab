@@ -13,10 +13,10 @@ describe('Create new page', () => {
   it('successfully', () => {
     const wikiContent = faker.random.words(4)
 
-    cy.get('.qa-wiki-content-textarea').type(wikiContent)
+    cy.get('#wiki_content').type(wikiContent)
     cy.contains('Create page').click()
 
-    cy.url().should('be.equal', `${Cypress.config('baseUrl')}${Cypress.env('user_name')}/${project.name}/wikis/home`)
-    cy.get('[data-qa-selector="wiki_page_content"]').should('contain', wikiContent)
+    cy.url().should('be.equal', `${Cypress.config('baseUrl')}${Cypress.env('user_name')}/${project.name}/-/wikis/home`)
+    cy.get('[data-testid=wiki_page_content]').should('contain', wikiContent)
   })
 })

@@ -14,6 +14,6 @@ describe('Comments on an Issue', () => {
 
     cy.gui_commentOnIssue(comment)
 
-    cy.get('.qa-noteable-note-item').should('contain', comment)
+    cy.get('.note-text > p').should('contain', comment)
   })
 })

@@ -3,7 +3,7 @@ const faker = require('faker')
 describe('Create User', () => {
   const randomName = faker.name.firstName().toLowerCase()
   const newUser = {
-    email: `${randomName}@example.com`,
+    email: `${randomName}@cypress-gitlab-test.com`,
     name: `${randomName} ${faker.name.lastName().toLowerCase()}`,
     username: randomName,
     password: faker.internet.password()

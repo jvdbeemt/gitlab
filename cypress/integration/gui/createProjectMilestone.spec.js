@@ -1,6 +1,6 @@
 const faker = require('faker')
 
-describe('Create Projet Milestone', () => {
+describe('Create Project Milestone', () => {
   const project = {
     name: faker.datatype.uuid(),
     milestone: {

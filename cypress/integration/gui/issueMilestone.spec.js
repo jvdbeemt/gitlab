@@ -14,7 +14,6 @@ describe('Issue milestone', () => {
 
   it('adds milestone to an issue', () => {
     cy.gui_addMilestoneOnIssue(milestone)
-
-    cy.get('.block.milestone').should('contain', milestone.title)
+    cy.get('[data-testid=select-milestone] > .gl-link').should('contain', milestone.title )
   })
 })

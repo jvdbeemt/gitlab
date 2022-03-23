@@ -12,7 +12,7 @@ describe('Issue board', () => {
         .should('contain', issue.body.title)
 
       cy.visit(`${Cypress.env('user_name')}/${projects.body[0].name}/issues/${issue.body.iid}`)
-      cy.get('.d-none.btn-close').click()
+      cy.get('[data-testid=close-reopen-button]').click()
 
       cy.visit(`${Cypress.env('user_name')}/${projects.body[0].name}/-/boards`)
 

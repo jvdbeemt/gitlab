@@ -1,5 +1,5 @@
 {
-    "baseUrl": "http://localhost/",
+    "baseUrl": "http://gitlab.example.com/",
     "experimentalSessionSupport": true,
     "fixturesFolder": false,
     "pluginsFile": false

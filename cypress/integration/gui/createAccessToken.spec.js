@@ -5,10 +5,9 @@ describe('Create Access Token', () => {
 
   it('successfully', () => {
     cy.gui_createAccessToken(faker.datatype.uuid())
-
-    cy.contains('Your new personal access token has been created.')
+      cy.contains('Your new personal access token has been created.')
       .should('be.visible')
-    cy.get('.qa-created-personal-access-token')
+    cy.get('#created-personal-access-token')
       .should('be.visible')
   })
 })

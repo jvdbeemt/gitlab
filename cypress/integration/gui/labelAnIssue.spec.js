@@ -18,6 +18,6 @@ describe('Label an issue', () => {
   it('successfully', () => {
     cy.gui_labelIssueWith(label)
 
-    cy.get('.qa-labels-block').should('contain', label.name)
+    cy.get('[data-testid=collapsed-content] > [data-testid=value-wrapper] > .gl-label > .gl-link > .gl-label-text').should('contain', label.name)
   })
 })

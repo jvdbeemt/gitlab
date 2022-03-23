@@ -8,7 +8,7 @@ describe('Close an issue', () => {
   })
 
   it('successfully', () => {
-    cy.get('.d-none.btn-close').click()
+    cy.get('[data-testid=close-reopen-button] > .gl-button-text').click()
 
     cy.get('.status-box-issue-closed')
       .should('be.visible')

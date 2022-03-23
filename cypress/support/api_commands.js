@@ -113,3 +113,11 @@ Cypress.Commands.add('api_deleteBroadcastMessages', () =>
     url: `/api/v4/broadcast_messages/${message.id}?private_token=${accessToken}`
   })))
 )
+
+Cypress.Commands.add('api_getPersonalAccesTokens', () =>
+  cy.api_getAllBroadcastMessages().then(res => res.body.forEach(message => cy.request({
+    method: 'GET',
+    url: `/api/v4/personal_access_tokens/?private_token=${accessToken}`
+  })))
+)
+
